@@ -3,7 +3,7 @@ import nolike from '../../assets/icons/nolike.svg';
 import like from '../../assets/icons/like.svg';
 import gql from 'graphql-tag';
 import { useMutation } from '@apollo/client'
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const LikeButton = ({user, id, likeCount, likes, handleError, commentId}) => {
     const [liked, setLiked] = useState(false);

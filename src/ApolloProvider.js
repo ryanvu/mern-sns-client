@@ -3,8 +3,9 @@ import App from './App';
 import { ApolloClient, InMemoryCache, createHttpLink, ApolloProvider } from '@apollo/client';
 import { setContext } from 'apollo-link-context';
 
+console.log(process.env.REACT_APP_URI)
 const httpLink = createHttpLink({
-    uri:process.env.REACT_API_URI;
+    uri: process.env.REACT_APP_URI
 })
 
 const authLink = setContext(() => {
