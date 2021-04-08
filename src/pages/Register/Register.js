@@ -44,7 +44,7 @@ const Register = ({history}) => {
     }
     
     return (
-        <div className="register">
+        <div className="register" onClick={()=>{showPassword(prev => !prev)}}>
             {loading ? <Loading /> :
             <form className="register__form" onSubmit={onSubmit}>
                 <h1>Register</h1>
