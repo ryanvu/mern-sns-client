@@ -1,0 +1,57 @@
+@use '../../partials/mixins' as *;
+
+.header{
+    margin: 1rem;
+    display: flex; 
+    flex-direction: column;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid black;
+    @include tablet{
+        margin: 2rem;
+    }
+
+    @include desktop{
+        max-width: 960px;
+        margin: 2rem auto;
+    }
+    &__wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__toggle{
+        @include tablet{
+            display: none;
+        }
+    }
+
+    &__nav{
+        display: none;
+        @include tablet{
+            display: flex;
+            align-items: center;
+        }
+
+        &-item{
+            margin-right: 1rem;
+            transition: all 0.5s ease;
+        }
+    }
+
+    &__user{
+        margin-right: 1rem;
+    }
+
+    &__logout{
+        padding: 0.5rem 0.75rem;
+        border: none;
+        border-radius: 8px;
+    }
+}
+
+.active{
+    border-bottom: 1px solid red;
+    transform: translateY(-5px);
+    transition: all 0.5s ease;
+}

@@ -1,0 +1,73 @@
+@use '../../partials/mixins' as *;
+
+.home{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+        margin: 0 2rem;
+    }
+
+    @include desktop{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    &__error{
+        display: flex;
+        align-items: center;
+        background: #FFF6F8;
+        margin-top: 1rem;
+        border-radius: 4px;
+        border: 1px solid #A7868D;
+        padding: 1rem;
+        color: #A7868D;
+        margin: 0 2.5rem 1rem;
+
+        &::before{
+            background-image: url('../../assets/icons/danger.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1.25rem 1.25rem;
+            margin-right: 0.5rem;
+            display: inline-block;
+            height: 1.5rem;
+            width: 1.5rem;
+            content:"";
+        }
+       
+    }
+
+    &__btn{
+        align-self: flex-end;
+        background: rgb(107, 202, 240);
+        box-shadow: none;
+        border: none;
+        color: white;
+        font-size: 1rem;
+        border-radius: 40px;
+        padding: 0.5rem 0.75rem;
+    }
+
+    &__posts{
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet{
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: auto;
+        }
+        @include desktop{
+            display: grid;
+            grid-template-columns: 300px 300px 300px;
+            grid-template-rows: auto;
+        }
+        
+    
+        max-width: 900px;
+        margin: 0 auto;
+     
+    }
+}

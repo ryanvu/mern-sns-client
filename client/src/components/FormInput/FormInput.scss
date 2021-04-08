@@ -1,0 +1,31 @@
+@use '../../partials/mixins' as *;
+
+.form__input{
+    display: flex;
+    flex-direction: column;
+
+    &-label{
+        margin-bottom: 0.25rem;
+    }
+
+    &-input{
+        margin-bottom: 1rem;
+        padding: 0.5rem 0.5rem;
+        &:focus{
+            outline: none;
+        }
+
+        &:active{
+            outline: none;
+        }
+    }
+
+    &-post{
+        @extend .form__input-input;
+        font-family: "Avenir";
+        border: 1px solid black;
+        border-radius: 8px;
+        height: 150px;
+        resize: none;
+    }
+}

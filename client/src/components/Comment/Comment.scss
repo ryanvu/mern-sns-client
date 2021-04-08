@@ -1,0 +1,25 @@
+@use '../../partials/mixins' as *;
+
+.comment{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    &__date{
+        font-size: 12px;
+        color: gray;
+        border-bottom: 1px solid gray;
+        margin-bottom: 1rem;
+    }
+
+    &__body{
+        font-size: 1rem;
+    }
+
+    &__tray{
+         display: flex;
+    }
+}
